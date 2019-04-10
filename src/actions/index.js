@@ -16,12 +16,14 @@ export const getTheData = () => {
        dispatch({ type: FETCHING_DATA });
        axios.get('https://swapi.co/api/people/')
         .then((res) => {
+            console.log(res);
             dispatch({ 
                 type: SUCCESS,
                 payload: res.data
              })
         })
         .catch((err) => {
+            console.log(err);
             dispatch({ 
                 type: FAILURE,
                 payload: err
