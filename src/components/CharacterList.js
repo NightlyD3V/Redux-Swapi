@@ -14,9 +14,8 @@ const CharacterList = props => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
-    characters: state.characters
+    characters: state.charsReducer.characters
   }
 }
 

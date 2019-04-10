@@ -8,7 +8,6 @@ import { createStore, applyMiddleware } from "redux";
 // rootReducer from ./reducers
 import rootReducer from "./reducers";
 // needed dependancies
-
 // thunk from redux-thunk
 import thunk from 'redux-thunk';
 // logger from redux-logger
@@ -18,8 +17,8 @@ import logger from 'redux-logger';
 const store = createStore(
   rootReducer,
   /* applyMiddleware goes here */
-  applyMiddleware(thunk, logger),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunk, logger)
 );
 
 ReactDOM.render(
